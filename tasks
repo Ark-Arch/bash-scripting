@@ -1,0 +1,2 @@
+- write a script that leaves out only the essential directories at the root directory,
+  but it deletes the rest.
