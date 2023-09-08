@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Take not of the fact that this script is only adapted to 'htop'.
+
 command_path=/usr/bin/htop
 
 
