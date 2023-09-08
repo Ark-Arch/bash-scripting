@@ -6,9 +6,10 @@ file_name="./"
 
 if [ -e $file_name ]
 then 
-	if [ -d $file_name -a ! -s $file_name ]
+	if [ -d $file_name && ! -s $file_name ]
 	then
 		echo "$file_name is an empty directory!"
+		echo
 	elif [ -d $file_name -a -s $file_name ]
 	then
 		echo "$file_name is a directory with contents"
@@ -16,9 +17,11 @@ then
 		echo "The below are its contents:"
 		echo " "
 		echo $(ls $file_name)
+		echo
 	elif [ -f $file_name ] && [ ! -s $file_name ]
 	then 
 		echo "$file_name is an empty file!"
+		echo
 	elif [ -f $file_name -a -s $filename ]
 	then
 		echo "$file_name is a file with contents"
@@ -26,6 +29,7 @@ then
 		echo "The below is its content"
 		echo " "
 		echo $(cat $file_name)
+		echo
 	fi
 
 else
